@@ -110,13 +110,30 @@ function getItemFromID (item_id, callback) {
     });
 }
 
+//Add item to menu (only used for setup (and practically flight attendants)
+function addItem (item_name, item_price, category, callback) {
+    const conn = mysql.createConnection(dbconfig);
+    conn.connect();
+    conn.query('INSERT INTO items (item_name, item_price, category) VALUES (\'' + item_name + '\',\'' + item_price + '\',\'' + category + '\')', function (error, results, fields) {
+        if (error) {
+            conn.on('error', function(err) {
+                console.log("[mysql error]",err);
+            });
+        }
+
+        if(callback) callback('Added ' + item_name + ' Successfully.')
+        conn.end();
+    });
+}
+
 module.exports = {
     getOrders,
-    getItemID: getOrderItemID,
+    getOrderItemID,
     getItemsInCategory,
     enqueueOrder,
     dequeueOrder,
-    getItemFromID
+    getItemFromID,
+    addItem
 }
 
 
