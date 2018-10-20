@@ -10,6 +10,11 @@
     "debug": "~2.6.9",
     "express": "~4.16.0",
     "express-handlebars": "^3.0.0",
+<<<<<<< HEAD
+=======
+    "handlebars": "^4.0.12",
+    "hbs": "^4.0.1",
+>>>>>>> 504570b58b3df618a8cd47f114c50d290c494f9b
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
     "pug": "2.0.0-beta11"
