@@ -1,16 +1,43 @@
 const express = require('express');
 const router = express.Router();
-var bodyParser = require('body-parser')
+const bodyParser = require('body-parser')
 
-const getOrders = require('./dbcontroller');
+const dbcontroller = require('./dbcontroller');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
 
-    getOrders(function(results){
+    dbcontroller.getOrders(function(results){
         const list = results;
         console.log(list);
     });
+
+    dbcontroller.getItemID(1, function(results){
+        const list = results;
+        console.log(list);
+    });
+
+    dbcontroller.getItemsInCategory('Beverage', function(results){
+        const list = results;
+        console.log(list);
+    });
+
+    dbcontroller.enqueueOrder(2, 'Johnson', '13D', function(results){
+        const list = results;
+        console.log(list);
+    })
+
+    dbcontroller.dequeueOrder(function (results) {
+        const list = results;
+        console.log(list);
+    })
+
+    dbcontroller.getItemFromID(1, function(results) {
+        const list = results;
+        console.log(list);
+    });
+
+
     res.render('index.hbs', { title: 'Express' });
 });
 
