@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
         console.log(list);
     });
 
-    dbcontroller.getItemID(1, function(results){
+    dbcontroller.getOrderItemID(12, function(results){
         const list = results;
         console.log(list);
     });
@@ -37,6 +37,10 @@ router.get('/', function(req, res, next) {
         console.log(list);
     });
 
+    dbcontroller.addItem('Pepsi', 0.50, 'Beverage', function(results){
+        const list = results;
+        console.log(list);
+    });
 
     res.render('index.hbs', { title: 'Express' });
 });
