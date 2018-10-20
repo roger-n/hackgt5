@@ -3,7 +3,10 @@ const router = express.Router();
 var bodyParser = require('body-parser')
 
 const dbcontroller = require('./dbcontroller');
+<<<<<<< HEAD
 
+=======
+>>>>>>> de84f46c5e0c90705f02a729435de54cbf6ccb31
 
 /* GET home page. */
 dbcontroller.addItem('Pepsi', 0.50, 'Beverage', function(results){
@@ -12,8 +15,12 @@ dbcontroller.addItem('Pepsi', 0.50, 'Beverage', function(results){
 });
 router.get('/', function(req, res, next) {
 
+<<<<<<< HEAD
     dbcontroller.getOrders((results)=>
     {
+=======
+    dbcontroller.getOrders(function(results){
+>>>>>>> de84f46c5e0c90705f02a729435de54cbf6ccb31
         const list = results;
         console.log(list);
     });
