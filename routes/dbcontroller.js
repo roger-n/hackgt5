@@ -1,4 +1,5 @@
 const sql = require('mssql');
+const mysql = require('mysql');
 
 const dbconfig = {
     server: "localhost",
@@ -9,23 +10,33 @@ const dbconfig = {
 };
 
 function getOrders() {
-    const conn = new sql.Connection(dbconfig);
+    //const conn = new mysql.Connection(dbconfig);
+    const conn = mysql.createConnection(dbconfig);
 
-    conn.connect().then(function () {
-        const req = new sql.Request(conn);
-        req.query("SELECT * FROM orders").then(function(reoordset){
-            console.log(recordset);
-            conn.close();
-        })
-            .catch (function (err){
-                console.log(err);
-                conn.close();
-            });
+    // conn.connect().then(function () {
+    //     const req = new sql.Request(conn);
+    //     req.query("SELECT * FROM orders").then(function(reoordset){
+    //         console.log(recordset);
+    //         conn.close();
+    //     })
+    //         .catch (function (err){
+    //             console.log(err);
+    //             conn.close();
+    //         });
+    //
+    // })
+    //     .catch (function(err) {
+    //         console.log(err);
+    //     })
 
-    })
-        .catch (function(err) {
-            console.log(err);
-        })
+    conn.connect();
+
+    conn.query('SELECT * FROM orders', function (error, results, fields) {
+        if (error) throw error;
+        console.log(results);
+    });
+
+    conn.end();
 }
 
 module.exports = getOrders();
