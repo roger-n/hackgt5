@@ -16,9 +16,8 @@ router.get('/', function(req, res, next) {
     getOrders(function(results){
         const list = results;
         console.log(list);
-        res.render('index.hbs', { title: 'Express' });
-
     });
+    res.render('index.hbs', { title: 'Express' });
 
 >>>>>>> d37aabdbf090bec40676464ede07115cc2e3fdb0
 
