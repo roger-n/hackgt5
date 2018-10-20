@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.engine('.hbs',exphbs({defaultLayout: 'main', extname:'.hbs'}))
+app.engine('.hbs',exphbs({defaultLayout: 'main', extname:'.hbs'}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
