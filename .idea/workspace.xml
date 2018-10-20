@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="f1d0dc46-003d-4da3-a967-80c88fc8192d" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/../hackgt5webapp/.idea/hackgt5webapp.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../hackgt5webapp/.idea/jsLibraryMappings.xml" afterDir="false" />
@@ -18,6 +19,13 @@
       <change afterPath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
+=======
+    <list default="true" id="13557b3d-4c09-4cca-aad2-ebcfc9336308" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/error.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layout.pug" beforeDir="false" />
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,37 +37,63 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
+<<<<<<< HEAD
     <session id="1399731330">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.open.time.0" value="1" />
+=======
+    <session id="1301837653">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.6" value="1" />
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+<<<<<<< HEAD
           <entry key="js" value="3" />
+=======
+          <entry key="gitignore" value="1" />
+          <entry key="hbs" value="3" />
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+<<<<<<< HEAD
           <entry key="JavaScript" value="3" />
+=======
+          <entry key="Handlebars/Mustache" value="3" />
+          <entry key="PLAIN_TEXT" value="1" />
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="js" value="20" />
+=======
+          <entry key="gitignore" value="14" />
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+<<<<<<< HEAD
           <entry key="JavaScript" value="20" />
+=======
+          <entry key="PLAIN_TEXT" value="14" />
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -83,25 +117,54 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+=======
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.hbs">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/login.hbs">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/queues.hbs">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="13" selection-start-column="13" selection-end-column="13" />
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+<<<<<<< HEAD
   <component name="FindInProjectRecents">
     <findStrings>
       <find>pug</find>
     </findStrings>
   </component>
+=======
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/routes/users.js" />
+=======
+        <option value="$PROJECT_DIR$/.gitignore" />
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
       </list>
     </option>
   </component>
@@ -122,16 +185,30 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="952" />
     <option name="width" value="977" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -142,18 +219,25 @@
             <path>
               <item name="hackgt5" type="b2602c69:ProjectViewProjectNode" />
               <item name="hackgt5" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hackgt5" type="b2602c69:ProjectViewProjectNode" />
               <item name="hackgt5" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -165,6 +249,14 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+<<<<<<< HEAD
+=======
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\phild\Documents\hackgt5" />
+    </key>
+  </component>
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -182,17 +274,30 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="f1d0dc46-003d-4da3-a967-80c88fc8192d" name="Default Changelist" comment="" />
       <created>1540011463741</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540011463741</updated>
       <workItem from="1540011464852" duration="1712000" />
+=======
+      <changelist id="13557b3d-4c09-4cca-aad2-ebcfc9336308" name="Default Changelist" comment="" />
+      <created>1540012404192</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1540012404192</updated>
+      <workItem from="1540012408936" duration="354000" />
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="1712000" />
+=======
+    <option name="totallyTimeSpent" value="354000" />
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -200,7 +305,11 @@
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24983476" />
+=======
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24950495" />
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
@@ -208,7 +317,11 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32907802" />
+=======
+      <window_info anchor="bottom" id="Run" order="2" />
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -225,6 +338,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -243,6 +357,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="13" column="27" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="27" />
+=======
+    <entry file="file://$PROJECT_DIR$/views/index.hbs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/login.hbs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/queues.hbs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+>>>>>>> 0870717fdbff47d40f2470e7bb41ba5e138a9d86
         </state>
       </provider>
     </entry>
