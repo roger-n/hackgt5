@@ -1,18 +1,18 @@
 #header {
-color:#2e6bf1;
-text-align: left;}
+    color:#2e6bf1;
+    text-align: left;}
 
 #header-photo {
-display: inline;
-position:relative;
-float:left; 
-width: 8%;
-height: 8%;
+    display: inline;
+    position:relative;
+    float:left;
+    width: 8%;
+    height: 8%;
 }
 
-#user-login{  
-display:inline;
-position:relative;
-float:right;
-padding-right: 20px;
+#user-login{
+    display:inline;
+    position:relative;
+    float:right;
+    padding-right: 20px;
 }

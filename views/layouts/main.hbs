@@ -4,11 +4,28 @@
     <meta charset="UTF-8">
     <title>HackGT</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/order_form.css">
 </head>
 <body>
-{{body}}
-<script src="/js/query.min.js"></script>
+{{{body}}}
+<script src="/js/jquery.min.js"></script>
 <script src ="/js/bootstrap.min.js"></script>
+<script>
+    $('#login').on('click',event=>
+    {
+        event.preventDefault()
+        $.ajax({
+            method:'POST',
+            url:'/',
+            success:event=>
+            {
+                console.log("Successfully changing pages")
+                window.location.href ="/login"
+            }
+
+        })
+    })
+</script>
 </body>
 </html>
