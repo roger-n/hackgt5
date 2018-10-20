@@ -55,8 +55,8 @@ function getItemsInCategory (category, callback){
                 console.log("[mysql error]",err);
             });
         }
-        //results = JSON.stringify(results);
-        //results =  JSON.parse(results);
+        results = JSON.stringify(results);
+        results =  JSON.parse(results);
 
         if(callback) callback(results);
         conn.end();
