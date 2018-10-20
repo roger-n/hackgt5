@@ -21,7 +21,7 @@ async function getOrders(callback){
                 console.log("[mysql error]",err);
             });
         }
-        console.log(results)
+        //console.log(results)
         //return callback(results);
         conn.end();
     });
