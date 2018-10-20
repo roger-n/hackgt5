@@ -14,7 +14,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 // //handlebars setup
-// const exphbs  = require('express-handlebars');
+const exphbs  = require('express-handlebars');
 // const hbs = exphbs.create({ /* config */ });
 //
 // // Register `hbs.engine` with the Express app.
@@ -26,6 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.engine('.hbs',exphbs({defaultLayout: 'main', extname:'.hbs'}))
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
