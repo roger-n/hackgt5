@@ -1,14 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const getOrders = require('./dbcontroller')
+var bodyParser = require('body-parser')
 
+const getOrders = require('./dbcontroller');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    const dbcontroller = require('./dbcontroller')
     res.render('index.hbs', { title: 'Express' });
-    getOrders();
-        //console.log(getOrders());
+    var results = getOrders();                              //comment this and the line below it out for testing
+    setTimeout(function(){console.log(results);}, 500);
+
 });
 
 module.exports = router;
