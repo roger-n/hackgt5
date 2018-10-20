@@ -6,6 +6,10 @@ const dbcontroller = require('./dbcontroller');
 
 
 /* GET home page. */
+dbcontroller.addItem('Pepsi', 0.50, 'Beverage', function(results){
+    const list = results;
+    console.log(list);
+});
 router.get('/', function(req, res, next) {
 
     dbcontroller.getOrders((results)=>
@@ -14,7 +18,7 @@ router.get('/', function(req, res, next) {
         console.log(list);
     });
 
-    res.render('index.hbs', { title: 'Express' });
+    res.render('index', { title: 'Express' });
 });
 router.post('/',(req,res)=>{
     console.log("Post request coming in");
