@@ -1,39 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Order Page</title>
-  <link rel="stylesheet" href="css/order_items.css">
+  <link rel="stylesheet" href="styles/login_page.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
- <div class="well margin-total text-center">
-<div class="w3-container w3-teal">
-  <h2>Input Form</h2>
-</div>
+  <div class="well margin-total text-center">
+    <div class="w3-container w3-teal">
+      <h2>Input Form</h2>
+    </div>
 
-<form class="w3-container">
-  <p>
-  <input class="w3-input" type="text">
-  <label>Seat Number</label></p>
+    <form class="w3-container">
+      <p>
+        <input class="w3-input" type="text">
+        <label>Seat Number</label></p>
 
-  <p>
-  <input class="w3-input" type="text">
-  <label>Last Name</label></p>
-  
-  <select class="w3-select" name="Menu Category">
+      <p>
+        <input class="w3-input" type="text">
+        <label>Last Name</label></p>
+
+      <select class="w3-select" name="Menu Category">
     <option value="" disabled selected>Food Category</option>
     <option value="Meal">Meal</option>
     <option value="Drinks">Drinks</option>
     <option value="Snacks">Snacks</option>
   </select>
 
-  <p><button class="w3-btn w3-teal">Order</button></p>
+      <p><button type="button" class="w3-btn w3-teal" data-toggle="modal" data-target="#thanks">Order</button></p>
+    </form>
+  </div>
+  </div>
+  <!--Modal Overlay-->
+  <div class="modal fade" id="thanks" role="dialog">
+    <div class="modal-dialog">
 
-</form>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title text-center">Thanks</h4>
+        </div>
+        <div class="modal-body">
+          <img id="modal-img"src="resources/thanks.PNG">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
   </div>
 </body>
+
 </html>
