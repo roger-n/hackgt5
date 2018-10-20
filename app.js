@@ -13,6 +13,14 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+// //handlebars setup
+// const exphbs  = require('express-handlebars');
+// const hbs = exphbs.create({ /* config */ });
+//
+// // Register `hbs.engine` with the Express app.
+// app.engine('handlebars', hbs.engine);
+// app.set('view engine', 'handlebars');
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -35,7 +43,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.send('error: ' + err.message);
 });
 
 module.exports = app;
