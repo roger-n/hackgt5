@@ -33,10 +33,11 @@ function getOrders() {
 
     conn.query('SELECT * FROM orders', function (error, results, fields) {
         if (error) throw error;
+        //return results;
         console.log(results);
     });
 
     conn.end();
 }
 
-module.exports = getOrders();
+module.exports = getOrders;
