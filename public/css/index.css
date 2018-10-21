@@ -5,3 +5,21 @@ background-color: #2e6bf1;
 .margin-total {
  margin: 50px 70px 50px 70px;
 }
+
+.info-label {
+    padding-top: 0.5em;
+}
+
+.w3-input {
+    background-color: #D3D3D3;
+    text-align: center;
+    size: 50em;
+}
+
+.w3-select {
+    text-align: center;
+}
+
+.user-entry {
+    padding: 1em;
+}
