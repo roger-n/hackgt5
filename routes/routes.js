@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-var bodyParser = require('body-parser')
 
 const dbcontroller = require('./dbcontroller');
 
@@ -27,6 +26,7 @@ dbcontroller.enqueueOrder(1, 'Smith', '34B', function (results) {
     });
 router.post('/',(req,res)=>{
     console.log("Post request coming in");
+    console.log("Seat",req.body.seat);
     res.render('login')
 });
 /* GET login page. */

@@ -3,11 +3,13 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const bodyParser = require('body-parser');
 
 const indexRouter = require('./routes/routes');
 
 const app = express();
-
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
