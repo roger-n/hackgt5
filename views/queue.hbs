@@ -20,12 +20,18 @@
 </div>
 
 <div class="well container">
+    {{#each orders}}
     <div class="row" id="shift">
-        <div class="col"><h3>Seat #</h3></div>
-        <div class="col"><h3>Last Name</h3></div>
+        <div class="col"><h3>Seat # {{this.seat_number}}</h3></div>
+        <div class="col"><h3>Last Name {{this.last_name}}</h3></div>
     </div>
+    {{/each}}
+
+{{#each names}}
     <div class="row" id="shift">
-        <div class="col"><h3>Item Name</h3></div>
-        <div class="col"><h3>Price</h3></div>
+        <div class="col"><h3>Item Name {{this}}</h3></div>
     </div>
+{{/each}}
+
+
 </div>
