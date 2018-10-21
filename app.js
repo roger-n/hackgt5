@@ -8,8 +8,6 @@ const bodyParser = require('body-parser');
 const indexRouter = require('./routes/routes');
 
 const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -24,7 +22,6 @@ const exphbs  = require('express-handlebars');
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.engine('.hbs',exphbs({defaultLayout: 'main', extname:'.hbs'}));
