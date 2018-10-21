@@ -88,22 +88,25 @@ router.post('/login',(req,res)=>
 
 });
 
-router.get('/queue',(res,req)=>
+router.get('/queue',(req,res)=>
     {
-        let orders = {};
-        dbcontroller.getOrders(event=>{
-            orders = event;
+        let orders = dbcontroller.getOrders(results=>{
+            return results
         });
         res.render("queue.hbs",{title:'Express', orders});
     }
 );
 router.post('/queue',(req,res)=>
 {
-   dbcontroller.dequeueOrder().then(event=>{
-       console.log("Successfully removed from queue")
-   })
-    res.render('/queue')
-});
+
+   let orders =dbcontroller.dequeueOrder(results=>
+   {
+       console.log(results)
+       return results
+   });
+   res.render('queue')
+
+   });
 
 router.get('/logout',(req,res)=>
 {
