@@ -44,7 +44,7 @@ let food = [];
         res.render('index.hbs', { title: 'Express',
         food});
     });
-    const urlParse = bodyParser.urlencoded({extended:false})
+    const urlParse = bodyParser.urlencoded({extended:true})
 router.post('/',urlParse,(req,res)=>{
     console.log("Seat",req.body.seat);
     res.redirect('/')
@@ -53,7 +53,7 @@ router.post('/',urlParse,(req,res)=>{
 /* GET login page. */
 router.get('/login', (req,res)=>
 {
-  res.render('login',{});
+  res.render('login');
 });
 
 router.get('/item/:itemid',(req,res)=>
@@ -70,8 +70,8 @@ router.get('/item/:itemid',(req,res)=>
 
 router.post('/login',(req,res)=>
 {
-    console.log(req.body.username);
-    console.log(req.body.password);
+    console.log("Username",req.body.Username);
+    console.log("Password",req.body.Password);
     isValid = dbcontroller.verifyUser('root','password', function(result) {
         //isValid = dbcontroller.verifyUser(req.body.user_name,req.body.user_password, function(result) {
 
@@ -82,18 +82,9 @@ router.post('/login',(req,res)=>
         else
             res.redirect('/');
     });
-<<<<<<< HEAD
-    if (isValid) {
-        console.log('valid');
-        res.redirect('/queue');
-    }
-
-    else
-        res.redirect('/');
-=======
 
 
->>>>>>> d8b7006f9b38efeb6e28224995015d296bfcb118
+
 });
 
 router.get('/queue',(res,req)=>
