@@ -18,6 +18,9 @@ function getOrders(callback){
             console.log("[mysql error]", err);
         });
     }
+    console.log('error', error);
+    console.log('results', results);
+    console.log('fields', fields);
     results = JSON.stringify(results);
     results = JSON.parse(results);
 
@@ -170,7 +173,7 @@ router.get('/', function(req, res, next) {
 
     dbcontroller.dequeueOrder(function (results) {
         const list = results;
-        console.log(list);
+        qconsole.log(list);
     })
 
     dbcontroller.getItemFromID(1, function(results) {
