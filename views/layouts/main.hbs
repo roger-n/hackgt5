@@ -31,20 +31,22 @@
     });
     $('#category').on('change',event=>
     {
+        event.preventDefault();
       let value = $('#category option:selected').text();
-      event.preventDefault();
-          $.ajax({
+         /* $.ajax({
               url:`/item/${value}`,
               method:'POST',
               dataType:'String',
               data:{
                 food:value
               },
-              success:event=>{
-                  console.log(event)
+              success:results=>
+              {
+                  console.log("Successfully posted to server")
               }
 
-          })
+          })*/
+         window.location.replace(`/item/${value}`)
       });
 
 </script>

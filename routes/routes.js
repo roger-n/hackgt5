@@ -38,7 +38,7 @@ router.get('/login', (req,res)=>
   res.render('login',{});
 });
 
-router.post('/item/:itemid',(req,res)=>
+router.get('/item/:itemid',(req,res)=>
 {
     console.log(req.params.itemid);
     dbcontroller.getItemsInCategory(req.params.itemid, results=>{
@@ -46,7 +46,7 @@ router.post('/item/:itemid',(req,res)=>
         console.log(food);
         console.log(results)
         console.log("Type",typeof(food));
-        return res.json({results})
+        res.render('index.hbs',{title:'Express',food:food})
     })
 });
 
