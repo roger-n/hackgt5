@@ -4,10 +4,7 @@ const bodyParser = require('body-parser');
 const dbcontroller = require('./dbcontroller');
 
 
-dbcontroller.verifyUser('root', 'password', function(results){
-    const list = results;
-    console.log(list);
-});
+
 // dbcontroller.enqueueOrder(1, 'Smith', '34B', function (results) {
 //     const list = results;
 //     console.log(list);
