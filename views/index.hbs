@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html lang="en">
 <style>
     background {
@@ -97,3 +98,93 @@
 </body>
 
 </html>
+=======
+{{!-- <div class="well margin-total text-center">
+    <div class="w3-container w3-teal">
+        <h2>Input Form</h2>
+    </div>
+
+    <form class="w3-container">
+        <p>
+            <input class="w3-input" type="text">
+            <label>Seat Number</label></p>
+
+        <p>
+            <input class="w3-input" type="text">
+            <label>Last Name</label></p>
+
+        <select class="w3-select" name="Menu Category">
+            <option value="" disabled selected>Food Category</option>
+            <option value="Meal">Meal</option>
+            <option value="Drinks">Drinks</option>
+            <option value="Snacks">Snacks</option>
+        </select>
+
+        <p><button class="w3-btn w3-teal">Order</button></p>
+
+    </form>
+</div>
+</div> --}}
+
+  
+<div class="margin-total" id="header">
+  <nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <div id="header-photo">
+    <img src="https://img.freepik.com/free-icon/restaurant_318-108263.jpg?size=338c&ext=jpg" width="30" height="30" class="align-top" alt="">
+    <img src="http://worldartsme.com/images/black-line-airplane-clipart-1.jpg" width="30" height="30">
+    </div>
+    <h1 id="header-text">InFlight Service Orders</h1>
+  </a>
+</nav>
+    <div id="user-login">
+      <button class="btn btn-primary" type="submit" role="button" id="login">Flight Attendant Login</button>
+    </div>
+  </div>
+  
+
+    <div class="well margin-total text-center">
+      <div class="w3-container w3-teal">
+        <h2>Enter Requests Below </h2>
+      </div>
+
+      <form class="w3-container" method="post" action="/">
+        <p>
+          <input class="w3-input" type="text" value={{seat_number}}>
+          <label>Seat Number</label></p>
+
+        <p>
+          <input class="w3-input" type="text" value={{last_name}}>
+          <label>Last Name</label></p>
+
+        <select class="w3-select" name="Menu Category">
+    <option value="" disabled selected>Food Category</option>
+    <option value="Meal">Meal</option>
+    <option value="Drinks">Drinks</option>
+    <option value="Snacks">Snacks</option>
+  </select>
+
+        <button type="submit" class="w3-btn w3-teal" data-toggle="modal" data-target="#thanks">Order</button>
+      </form>
+    </div>
+</div>
+<!--Modal Overlay-->
+<div class="modal fade" id="thanks" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img id="modal-img" src="https://raw.githubusercontent.com/roger-n/hackgt5/Yuntao/Capture.PNG" alt="Thank You">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+>>>>>>> e26a50dc36335fad5fcb479e20ceb8d1eca79b3c
