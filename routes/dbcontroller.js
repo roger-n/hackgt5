@@ -129,6 +129,22 @@ function addItem (item_name, item_price, category, callback) {
     });
 }
 
+//Check for existence of a user with the u/p combination. returns true if yes, no if false
+function verifyUser (username, password, callback) {
+    const conn = mysql.createConnection(dbconfig);
+    conn.connect();
+    conn.query('SELECT * FROM users WHERE username=\'' + username + '\' AND password=\'' + password + '\'', function (error, results, fields) {
+        if (error) {
+            conn.on('error', function(err) {
+                console.log("[mysql error]",err);
+            });
+        }
+
+        if(callback) callback(results != undefined)
+        conn.end();
+    })
+}
+
 module.exports = {
     getOrders,
     getOrderItemID,
@@ -136,7 +152,8 @@ module.exports = {
     enqueueOrder,
     dequeueOrder,
     getItemFromID,
-    addItem
+    addItem,
+    verifyUser
 }
 
 
