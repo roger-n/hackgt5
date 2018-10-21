@@ -39,6 +39,8 @@ function getOrderItemID(order_id, callback){
                 console.log("[mysql error]",err);
             });
         }
+        results = JSON.stringify(results);
+        results =  JSON.parse(results);
 
         if(callback) callback(results[0].item_id)
         conn.end();
@@ -100,13 +102,13 @@ function getItemFromID (item_id, callback) {
     const conn = mysql.createConnection(dbconfig);
     conn.connect();
     conn.query('SELECT * FROM items WHERE item_id=' + item_id, function (error, results, fields) {
+            console.log(results[0]);
         if (error) {
             conn.on('error', function(err) {
                 console.log("[mysql error]",err);
             });
         }
-        results = JSON.stringify(results);
-        results = JSON.parse(results);
+
 
         if(callback) callback(results[0])
         conn.end();
