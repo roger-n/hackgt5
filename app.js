@@ -8,8 +8,6 @@ const bodyParser = require('body-parser');
 const indexRouter = require('./routes/routes');
 
 const app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
@@ -28,6 +26,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.engine('.hbs',exphbs({defaultLayout: 'main', extname:'.hbs'}));
+app.use(require('connect').bodyParser());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 app.use('/', indexRouter);
 
