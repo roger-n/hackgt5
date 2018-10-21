@@ -28,6 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.engine('.hbs',exphbs({defaultLayout: 'main', extname:'.hbs'}));
 //app.use(expressValidator());
 app.use('/', indexRouter);
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

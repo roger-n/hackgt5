@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
+router.use(bodyParser.urlencoded({extended: true}));
+router.use(bodyParser.json());
 const dbcontroller = require('./dbcontroller');
 
 
@@ -70,13 +72,15 @@ router.get('/item/:itemid',(req,res)=>
 
 router.post('/login',(req,res)=>
 {
-    console.log(req.body.username);
-    console.log(req.body.password);
-    isValid = dbcontroller.verifyUser('root','password', function(result) {
+
+
+    console.log(req.body.user_name);
+    console.log(req.body.user_password);
+    isValid = dbcontroller.verifyUser(req.body.user_name,req.body.user_password, function(result) {
         //isValid = dbcontroller.verifyUser(req.body.user_name,req.body.user_password, function(result) {
 
             const valid = result;
-        console.log(valid);
+        //console.log(valid);
         if (valid)
             res.redirect('/queue');
         else
