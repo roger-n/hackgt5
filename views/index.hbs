@@ -25,7 +25,7 @@
 </div>
 </div> --}}
 
-  
+
 <div class="margin-total" id="header">
   <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
@@ -49,10 +49,10 @@
 
       <form class="w3-container" method="post" action="/">
           <label>Seat Number</label>
-          <input class="w3-input" type="text" value={{seat}}>
+          <input class="w3-input" type="text" value="{{seat}}" name="seat">
 
           <label>Last Name</label>
-          <input class="w3-input" type="text" value={{last_name}}>
+          <input class="w3-input" type="text" value="{{last_name}}" name="last_name">
 
 
         <select class="w3-select" name="Menu Category">
@@ -62,7 +62,8 @@
     <option value="Snacks">Snacks</option>
   </select>
 
-        <button type="submit" class="w3-btn w3-teal" data-toggle="modal" data-target="#thanks">Order</button>
+        <!--<button type="submit" class="w3-btn w3-teal" data-toggle="modal" data-target="#thanks">Order</button>-->
+          <input type="submit">
       </form>
     </div>
 </div>
