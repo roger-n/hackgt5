@@ -13,7 +13,6 @@ background-color: #2e6bf1;
 .w3-input {
     background-color: #D3D3D3;
     text-align: center;
-    size: 50em;
 }
 
 .w3-select {
@@ -22,4 +21,22 @@ background-color: #2e6bf1;
 
 .user-entry {
     padding: 1em;
+}
+
+.navbar-brand {
+    float: left;
+}
+
+#header-photo {
+    padding-right: 1em;
+    padding-top: 1em;
+}
+
+#header-text {
+    padding-left: 2em;
+}
+
+#modal-img {
+    height: 100%;
+    width: 100%;
 }

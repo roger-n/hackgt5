@@ -30,8 +30,8 @@
   <nav class="navbar navbar-light bg-light">
   <a class="navbar-brand" href="#">
     <div id="header-photo">
-    <img src="https://img.freepik.com/free-icon/restaurant_318-108263.jpg?size=338c&ext=jpg" width="30" height="30" class="align-top" alt="">
-    <img src="http://worldartsme.com/images/black-line-airplane-clipart-1.jpg" width="30" height="30">
+        <img src="https://img.freepik.com/free-icon/restaurant_318-108263.jpg?size=338c&ext=jpg" width="30" height="30" class="align-top" alt="">
+        <img src="http://worldartsme.com/images/black-line-airplane-clipart-1.jpg" width="30" height="30">
     </div>
     <h1 id="header-text">InFlight Service Orders</h1>
   </a>
@@ -69,9 +69,14 @@
           </div>
 
           <div class="user-entry">
+<<<<<<< HEAD
               <select class="w3-select" name="Item" id="Item">
                   {{#each food}}
                   <option value="{{this.item_id}}">{{this.item_name}}</option>
+=======
+              <select class="w3-select" name="Item">
+                  <option values="" disabled selected>Item</option>
+>>>>>>> 9bf27c53b357f35c2c53e74e3ab4ba5fe1010370
               </select>
                   {{/each}}
 
@@ -80,8 +85,7 @@
 
 
 
-        <button type="submit" class="w3-btn w3-teal" data-toggle="modal" data-target="#thanks">Order</button>
-
+        <button type="button" class="w3-btn w3-teal" data-toggle="modal" data-target="#thanks">Order</button>
       </form>
     </div>
 </div>
