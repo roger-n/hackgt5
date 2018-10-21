@@ -4,10 +4,10 @@ const router = express.Router();
 const dbcontroller = require('./dbcontroller');
 
 
-dbcontroller.enqueueOrder(1, 'Smith', '34B', function (results) {
-    const list = results;
-    console.log(list);
-})
+// dbcontroller.enqueueOrder(1, 'Smith', '34B', function (results) {
+//     const list = results;
+//     console.log(list);
+// })
 
 /* GET home page. */
 
