@@ -66,21 +66,8 @@ router.post('/login',(req,res)=>
 
 router.get('/queue',(req,res)=>
     {
-<<<<<<< HEAD
-        let orders = [];
-        let names = [];
-        dbcontroller.getOrders(event=>{
-            orders = event;
-            event.forEach(element=>{
-                names.push(dbcontroller.getItemFromID(element.item_id).item_name, result=>{
-
-                })
-            });
-            console.log(typeof(orders))
-=======
         let orders = dbcontroller.getOrders(results=>{
             return results
->>>>>>> 7fe9bf320f990bda7a668010abd49b77a5733541
         });
         res.render('queue.hbs',{title:'Express', orders:orders,names:names});
     }
