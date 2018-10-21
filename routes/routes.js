@@ -4,6 +4,24 @@ const bodyParser = require('body-parser');
 const dbcontroller = require('./dbcontroller');
 
 
+// isValid = dbcontroller.verifyUser('root','passwprd', result=>
+// {
+//     console.log(result);
+//     if (isValid) {
+//         console.log('true');
+//     } else {
+//         console.log('false');
+//     }
+// });
+
+//
+// const isValid = dbcontroller.verifyUser('root', 'password', function (results) {
+//     console.log(typeof (results));
+//     console.log(results);
+// })
+// console.log(isValid)
+
+
 
 // dbcontroller.enqueueOrder(1, 'Smith', '34B', function (results) {
 //     const list = results;
@@ -52,10 +70,19 @@ router.get('/item/:itemid',(req,res)=>
 
 router.post('/login',(req,res)=>
 {
-    isValid = dbcontroller.verifyUser(req.body.user_name,req.body.user_password, result=>
-    {
-     console.log(result);
+    console.log(req.body.username);
+    console.log(req.body.password);
+    isValid = dbcontroller.verifyUser('root','password', function(result) {
+        //isValid = dbcontroller.verifyUser(req.body.user_name,req.body.user_password, function(result) {
+
+            const valid = result;
+        console.log(valid);
+        if (valid)
+            res.redirect('/queue');
+        else
+            res.redirect('/');
     });
+<<<<<<< HEAD
     if (isValid) {
         console.log('valid');
         res.redirect('/queue');
@@ -63,6 +90,10 @@ router.post('/login',(req,res)=>
 
     else
         res.redirect('/');
+=======
+
+
+>>>>>>> d8b7006f9b38efeb6e28224995015d296bfcb118
 });
 
 router.get('/queue',(res,req)=>
@@ -71,7 +102,7 @@ router.get('/queue',(res,req)=>
         dbcontroller.getOrders(event=>{
             orders = event;
         });
-        res.render("queue",{orders});
+        res.render("queue.hbs",{title:'Express', orders});
     }
 );
 router.post('/queue',(req,res)=>
