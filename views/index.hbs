@@ -24,26 +24,35 @@
 
           <div class="user-entry">
               <label class="info-label">Seat Number</label>
-              <input class="w3-input" type="text" value={{seat}}>
+              <input class="w3-input" type="text" value="{{seat}}" name="seat">
           </div>
 
           <div class="user-entry">
               <label class="info-label">Last Name</label>
-              <input class="w3-input" type="text" value={{last_name}}>
+              <input class="w3-input" type="text" value="{{last_name}}" name="last_name">
           </div>
 
           <div class ="user-entry">
-              <select class="w3-select" name="Menu Category">
+              <select class="w3-select" name="Menu" id="category">
                   <option value="" disabled selected>Food Category</option>
                   <option value="Meal">Entree</option>
+<<<<<<< HEAD
                   <option value="Drinks">Snacks</option>
                   <option value="Snacks">Drinks</option>
+=======
+                  <option value="Drinks">Beverage</option>
+                  <option value="Snacks">Snack</option>
+>>>>>>> e8142b169a7431d3d282da57420736f6e925d0b0
               </select>
           </div>
 
           <div class="user-entry">
               <select class="w3-select" name="Item">
-                  <option values="" disabled selected>Item</option>
+                      <option values="" disabled selected>Item</option>
+                  {{#each food}}
+                      <option value="{{this.item_id}}">{{this.item_name}}</option>
+
+                  {{/each}}
               </select>
           </div>
 

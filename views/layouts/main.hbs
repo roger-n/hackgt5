@@ -16,19 +16,39 @@
 <script src ="/js/bootstrap.min.js"></script>
 <script>
     $('#login').on('click',event=>
-    {
+    {+
         event.preventDefault()
         $.ajax({
             method:'POST',
             url:'/',
             success:event=>
             {
-                console.log("Successfully changing pages")
+                console.log("Successfully changing pages");
                 window.location.href ="/login"
             }
 
         })
-    })
+    });
+    $('#category').on('change',event=>
+    {
+        event.preventDefault();
+      let value = $('#category option:selected').text();
+         /* $.ajax({
+              url:`/item/${value}`,
+              method:'POST',
+              dataType:'String',
+              data:{
+                food:value
+              },
+              success:results=>
+              {
+                  console.log("Successfully posted to server")
+              }
+
+          })*/
+         window.location.replace(`/item/${value}`)
+      });
+
 </script>
 </body>
 </html>
