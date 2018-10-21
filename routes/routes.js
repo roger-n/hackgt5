@@ -72,12 +72,9 @@ router.get('/item/:itemid',(req,res)=>
 
 router.post('/login',(req,res)=>
 {
-
-
     console.log(req.body.user_name);
     console.log(req.body.user_password);
     isValid = dbcontroller.verifyUser(req.body.user_name,req.body.user_password, function(result) {
-        //isValid = dbcontroller.verifyUser(req.body.user_name,req.body.user_password, function(result) {
 
             const valid = result;
         //console.log(valid);
