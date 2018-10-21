@@ -1,0 +1,32 @@
+h2{
+text-align: center;  
+}
+
+.margin-total {
+ margin: 50px 70px 50px 70px;
+}
+
+.navbar-brand {
+    float: left;
+}
+
+#header-photo {
+    padding-right: 1em;
+    padding-top: 1em;
+}
+
+#header-text {
+    padding-left: 2em;
+}
+
+#shift{
+text-align:center;
+}
+
+.box{
+background-color: white;
+color: black;
+border: 2px solid #7EC0EE;
+border-radius: 5%;
+}
+
