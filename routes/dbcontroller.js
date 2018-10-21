@@ -140,7 +140,7 @@ function verifyUser (username, password, callback) {
             });
         }
 
-        if(callback) callback(results != undefined)
+        if(callback) callback(results.length > 0)
         conn.end();
     })
 }
@@ -199,6 +199,11 @@ router.get('/', function(req, res, next) {
     });
 
     dbcontroller.addItem('Pepsi', 0.50, 'Beverage', function(results){
+        const list = results;
+        console.log(list);
+    });
+
+    dbcontroller.verifyUser('root', 'password', function(results){
         const list = results;
         console.log(list);
     });
