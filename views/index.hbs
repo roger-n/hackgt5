@@ -69,15 +69,11 @@
           </div>
 
           <div class="user-entry">
-<<<<<<< HEAD
-              <select class="w3-select" name="Item" id="Item">
-                  {{#each food}}
-                  <option value="{{this.item_id}}">{{this.item_name}}</option>
-=======
               <select class="w3-select" name="Item">
-                  <option values="" disabled selected>Item</option>
->>>>>>> 9bf27c53b357f35c2c53e74e3ab4ba5fe1010370
-              </select>
+                      <option values="" disabled selected>Item</option>
+                  {{#each food}}
+                      <option value="{{this.item_id}}">{{this.item_name}}</option>
+                  </select>
                   {{/each}}
 
           </div>

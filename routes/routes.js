@@ -9,7 +9,7 @@ const dbcontroller = require('./dbcontroller');
 //     const list = results;
 //     console.log(list);
 // })
-let food = {};
+let food = ;
 /* GET home page. */
 
     router.get('/', function(req, res, next) {
@@ -43,7 +43,6 @@ router.post('/item/:itemid',(req,res)=>
     console.log(req.params.itemid);
     dbcontroller.getItemsInCategory(req.params.itemid, food=>{
         this.food = food;
-        console.log("Food",this.food)
         res.redirect('/')
     })
 });
