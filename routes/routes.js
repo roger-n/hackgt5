@@ -28,7 +28,8 @@ const dbcontroller = require('./dbcontroller');
     const urlParse = bodyParser.urlencoded({extended:false})
 router.post('/',urlParse,(req,res)=>{
     console.log("Seat",req.body.seat);
-    res.render('login')
+    res.redirect('/')
+
 });
 /* GET login page. */
 router.get('/login', (req,res)=>
