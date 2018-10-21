@@ -56,8 +56,11 @@ router.post('/login',(req,res)=>
     {
      console.log(result);
     });
-    if (isValid)
+    if (isValid) {
+        console.log('valid');
         res.redirect('/queue');
+    }
+
     else
         res.redirect('/');
 });
