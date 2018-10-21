@@ -72,17 +72,11 @@ router.get('/item/:itemid',(req,res)=>
 
 router.post('/login',(req,res)=>
 {
-<<<<<<< HEAD
-    console.log("Username",req.body.Username);
-    console.log("Password",req.body.Password);
-    isValid = dbcontroller.verifyUser('root','password', function(result) {
-=======
 
 
     console.log(req.body.user_name);
     console.log(req.body.user_password);
     isValid = dbcontroller.verifyUser(req.body.user_name,req.body.user_password, function(result) {
->>>>>>> 21f2401f6283685809d6ca23ae9cbd9bac3647a5
         //isValid = dbcontroller.verifyUser(req.body.user_name,req.body.user_password, function(result) {
 
             const valid = result;
