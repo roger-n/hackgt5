@@ -19,8 +19,8 @@ function getOrders(callback){
         });
     }
     console.log('error', error);
-    console.log('results', results);
-    console.log('fields', fields);
+    //console.log('results', results);
+    //console.log('fields', fields);
     results = JSON.stringify(results);
     results = JSON.parse(results);
 
