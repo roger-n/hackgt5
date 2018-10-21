@@ -41,16 +41,50 @@ router.get('/login', (req,res)=>
   res.render('login',{});
 });
 
-router.post('/item/:itemid',(req,res)=>
+router.get('/item/:itemid',(req,res)=>
 {
     console.log(req.params.itemid);
     dbcontroller.getItemsInCategory(req.params.itemid, results=>{
         food = results;
         console.log(food);
-        console.log(results)
+        console.log(results);
         console.log("Type",typeof(food));
-        return res.json({results})
+        res.render('index.hbs',{title:'Express',food:food})
     })
+});
+
+router.post('/login',(req,res)=>
+{
+    isValid = dbcontroller.verifyUser(req.body.user_name,req.body.user_password, result=>
+    {
+     console.log(result);
+    });
+    if (isValid)
+        res.redirect('/queue');
+    else
+        res.redirect('/');
+});
+
+router.get('/queue',(res,req)=>
+    {
+        let orders = {};
+        dbcontroller.getOrders(event=>{
+            orders = event;
+        });
+        res.render("queue",{orders});
+    }
+);
+router.post('/queue',(req,res)=>
+{
+   dbcontroller.dequeueOrder().then(event=>{
+       console.log("Successfully removed from queue")
+   })
+    res.render('/queue')
+});
+
+router.get('/logout',(req,res)=>
+{
+   res.redirect('/')
 });
 
 module.exports = router;
