@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
-
+const bodyParser = require('body-parser');
 const dbcontroller = require('./dbcontroller');
+
 
 
 // dbcontroller.enqueueOrder(1, 'Smith', '34B', function (results) {
@@ -24,10 +25,11 @@ const dbcontroller = require('./dbcontroller');
 
         res.render('index.hbs', { title: 'Express' });
     });
-router.post('/',(req,res)=>{
-    console.log("Post request coming in");
+    const urlParse = bodyParser.urlencoded({extended:false})
+router.post('/',urlParse,(req,res)=>{
     console.log("Seat",req.body.seat);
-    res.render('login')
+    res.redirect('/')
+
 });
 /* GET login page. */
 router.get('/login', (req,res)=>
