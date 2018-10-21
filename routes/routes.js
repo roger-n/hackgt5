@@ -5,30 +5,6 @@ router.use(bodyParser.urlencoded({extended: true}));
 router.use(bodyParser.json());
 const dbcontroller = require('./dbcontroller');
 
-
-// isValid = dbcontroller.verifyUser('root','passwprd', result=>
-// {
-//     console.log(result);
-//     if (isValid) {
-//         console.log('true');
-//     } else {
-//         console.log('false');
-//     }
-// });
-
-//
-// const isValid = dbcontroller.verifyUser('root', 'password', function (results) {
-//     console.log(typeof (results));
-//     console.log(results);
-// })
-// console.log(isValid)
-
-
-
-// dbcontroller.enqueueOrder(1, 'Smith', '34B', function (results) {
-//     const list = results;
-//     console.log(list);
-// })
 let food = [];
 /* GET home page. */
 
@@ -98,9 +74,10 @@ router.get('/queue',(req,res)=>
 );
 router.post('/queue',(req,res)=>
 {
-   dbcontroller.dequeueOrder().then(event=>{
-       console.log("Successfully removed from queue")
-   })
+    dbcontroller.dequeueOrder(function (results) {
+        const list = results;
+        console.log(list);
+    })
     res.render('queue.hbs')
 });
 
