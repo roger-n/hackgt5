@@ -1,0 +1,45 @@
+h2{
+    text-align: center;
+}
+
+.margin-total {
+    margin: 50px 70px 50px 70px;
+}
+
+.navbar-brand {
+    float: left;
+}
+
+#header-photo {
+    padding-right: 1em;
+    padding-top: 1em;
+}
+
+#header-text {
+    padding-left: 2em;
+}
+
+#shift{
+    text-align:center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.well{
+    background:#7EC0EE;
+    width: 60%;
+}
+
+.box{
+    background-color: white;
+    color: black;
+    border: 2px solid #7EC0EE;
+    border-radius: 5%;
+}
+
+#shrink{
+    height: 60%;
+    width: 80%;
+    text-align:center;}
