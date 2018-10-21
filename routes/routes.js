@@ -44,10 +44,14 @@ router.get('/item/:itemid',(req,res)=>
     dbcontroller.getItemsInCategory(req.params.itemid, results=>{
         food = results;
         console.log(food);
-        console.log(results)
+        console.log(results);
         console.log("Type",typeof(food));
         res.render('index.hbs',{title:'Express',food:food})
     })
+});
+
+router.post('/login',(req,res)=>
+{
 });
 
 module.exports = router;
