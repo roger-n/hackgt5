@@ -98,23 +98,12 @@ router.get('/queue',(req,res)=>
 );
 router.post('/queue',(req,res)=>
 {
-<<<<<<< HEAD
 
-   let orders =dbcontroller.dequeueOrder(results=>
-   {
-       console.log(results)
-       return results
-   });
-   res.render('queue')
-
-   });
-=======
    dbcontroller.dequeueOrder().then(event=>{
        console.log("Successfully removed from queue")
    })
     res.render('queue.hbs')
 });
->>>>>>> cf308c8c8505730eacf226b6beea63e81b7d218d
 
 router.get('/logout',(req,res)=>
 {
