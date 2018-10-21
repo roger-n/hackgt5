@@ -9,7 +9,7 @@ const dbcontroller = require('./dbcontroller');
 //     const list = results;
 //     console.log(list);
 // })
-
+let food = {};
 /* GET home page. */
 
     router.get('/', function(req, res, next) {
@@ -23,7 +23,8 @@ const dbcontroller = require('./dbcontroller');
             console.log(list);
         });
 
-        res.render('index.hbs', { title: 'Express' });
+        res.render('index.hbs', { title: 'Express',
+        food});
     });
     const urlParse = bodyParser.urlencoded({extended:false})
 router.post('/',urlParse,(req,res)=>{
@@ -35,6 +36,16 @@ router.post('/',urlParse,(req,res)=>{
 router.get('/login', (req,res)=>
 {
   res.render('login',{});
+});
+
+router.post('/item/:itemid',(req,res)=>
+{
+    console.log(req.params.itemid);
+    dbcontroller.getItemsInCategory(req.params.itemid, food=>{
+        this.food = food;
+        console.log("Food",this.food)
+        res.redirect('/')
+    })
 });
 
 module.exports = router;
