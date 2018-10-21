@@ -12,10 +12,10 @@ dbcontroller.enqueueOrder(1, 'Smith', '34B', function (results) {
 /* GET home page. */
 
     router.get('/', function(req, res, next) {
-        dbcontroller.addItem('Pepsi', 0.50, 'Beverage', function(results){
-            const list = results;
-            console.log(list);
-        });
+        // dbcontroller.addItem('Pepsi', 0.50, 'Beverage', function(results){
+        //     const list = results;
+        //     console.log(list);
+        // });
 
         dbcontroller.getOrders(function(results){
             const list = results;
