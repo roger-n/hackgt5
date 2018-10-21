@@ -4,17 +4,11 @@ const bodyParser = require('body-parser');
 const dbcontroller = require('./dbcontroller');
 
 
-<<<<<<< HEAD
-dbcontroller.enqueueOrder(1, 'Smith', '34B', function (results) {
-    const list = results;
-    console.log(list);
-});
-=======
+
 // dbcontroller.enqueueOrder(1, 'Smith', '34B', function (results) {
 //     const list = results;
 //     console.log(list);
 // })
->>>>>>> 9a6b4b0fef6f93e5b0df9cbfe1325ac9c7ec6ca9
 
 /* GET home page. */
 
