@@ -35,3 +35,8 @@ background-color: #2e6bf1;
 #header-text {
     padding-left: 2em;
 }
+
+#modal-img {
+    height: 100%;
+    width: 100%;
+}
