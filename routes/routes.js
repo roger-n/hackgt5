@@ -90,9 +90,22 @@ router.post('/login',(req,res)=>
 
 router.get('/queue',(req,res)=>
     {
-        let orders = dbcontroller.getOrders(results=>{
-            return results
-        });
+        let names = []
+        let orders = dbcontroller.getOrders(function(results){
+            console.log(results);
+
+            var x;
+           for (let i = 0; i < results.length-1;i++){
+               element = results[i];
+
+
+                // element = JSON.stringify(element);
+                // x = Object.assign({}, JSON.parse(element));
+                dbcontroller.getItemFromID(element.item_id, function(element){
+                    names.push(element.item_name);
+                });
+            }});
+        console.log(names);
         res.render('queue.hbs',{title:'Express', orders:orders,names:names});
     }
 );
