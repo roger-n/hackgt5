@@ -31,7 +31,7 @@ router.post('/',urlParse,(req,res)=>{
 /* GET login page. */
 router.get('/login', (req,res)=>
 {
-  res.render('login');
+  res.render('login.hbs');
 });
 
 router.get('/item/:itemid',(req,res)=>
@@ -50,39 +50,38 @@ router.post('/login',(req,res)=>
 {
     console.log(req.body.user_name);
     console.log(req.body.user_password);
-    isValid = dbcontroller.verifyUser(req.body.user_name,req.body.user_password, function(result) {
+    isValid = dbcontroller.verifyUser(req.body.user_name,req.body.user_password, (result) => {
 
-            const valid = result;
+        const valid = result;
         //console.log(valid);
         if (valid)
             res.redirect('/queue');
         else
-            res.redirect('/');
+             res.redirect('/');
     });
-
-
 
 });
 
 router.get('/queue',(req,res)=>
     {
-        let names = []
-        let orders = dbcontroller.getOrders(function(results){
-            console.log(results);
-
-            var x;
-           for (let i = 0; i < results.length-1;i++){
-               element = results[i];
+        dbcontroller.getOrders(function(results){
+            let names = []
+            var i = 0;
+            for (i = 0; i < results.length-1;i++){
+               let element = results[i];
 
 
                 // element = JSON.stringify(element);
                 // x = Object.assign({}, JSON.parse(element));
-                dbcontroller.getItemFromID(element.item_id, function(element){
-                    names.push(element.item_name);
+                dbcontroller.getItemFromID(element.item_id, function(item){
+                    names.push(item.item_name);
                 });
-            }});
+        }});
         console.log(names);
         res.render('queue.hbs',{title:'Express', orders:orders,names:names});
+
+        // console.log("names : " + names);
+        // res.render('queue.hbs',{title:'Express', orders:orders,names:names});
     }
 );
 router.post('/queue',(req,res)=>
